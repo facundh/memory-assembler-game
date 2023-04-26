@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+body{
+    overflow-x: hidden;
+    -webkit-perspective: 1000;
+}
+
+a{
+    color: steelblue;
+    transition: color .3s ease-out;
+    -webkit-transition: color .3s ease-out;
+    -moz-transition: color .3s ease-out;
+    -ms-transition: color .3s ease-out;
+    -o-transition: color .3s ease-out;
+}
+
+a:hover{
+    color: rgba(6, 54, 94, 0.863);
+    cursor: pointer;
+}
+h1{
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1000px;
+    height: 800px;
+    margin: 10px 10px;
+
+}
+
+
+
+.picture{
+    width: 200px;
+    height: 200px;
+    margin: 10px 5px;
+    min-width: 80px;
+    transform-style: preserve-3d;
+}
+
+.picture, .card
+
+.picture:hover{
+    transform: rotateY(180deg);
+}
+
+.pictureFront{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-image: url("./img/one.jpg");
+    background-position: center center;
+    background-size: cover;
+
+}
+.pictureBack{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-image: url("./img/acertijo.jpg");
+    background-position: center center;
+    background-size: cover;
+
+}
+
