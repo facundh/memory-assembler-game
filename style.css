@@ -7,10 +7,14 @@
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
+    font-family: 'Bruno Ace SC', cursive;
 }
 body{
     overflow-x: hidden;
-    -webkit-perspective: 1000;
+    background-image: url("img/background.jpg"), linear-gradient(120deg, hsla(217, 96%, 81%, 0.411) 0%, hsla(199, 88%, 87%, 0.452) 100%);
+    background-position: center center;
+    background-size: cover;
+    
 }
 
 a{
@@ -20,6 +24,7 @@ a{
     -moz-transition: color .3s ease-out;
     -ms-transition: color .3s ease-out;
     -o-transition: color .3s ease-out;
+    
 }
 
 a:hover{
@@ -35,8 +40,7 @@ h1{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
     height: 800px;
     margin: 10px 10px;
 
@@ -52,28 +56,126 @@ h1{
     transform-style: preserve-3d;
 }
 
-.picture, .card
 
-.picture:hover{
-    transform: rotateY(180deg);
-}
-
-.pictureFront{
+.answer{
+    transform: rotateX(90deg);
+    transition: all .3s ease;
     width: 200px;
     height: 200px;
-    position: absolute;
-    background-image: url("./img/one.jpg");
-    background-position: center center;
-    background-size: cover;
+    margin: 10px 5px;
+    min-width: 80px;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+
+    background-color: black;
+    font-weight: bold;
+}
+
+.form-style{
+    width:600px;
+    height:700px;
+    margin:0px auto;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+}
+.start-form-style{
+    width:600px;
+    height:700px;
+    margin:0px auto;
+    padding:20px;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+}
+
+.title-form{
+    font-weight:bold; 
+    font-size:50px; 
+    text-align: center;
+    color: #09838b
+}
+.start-title-form{
+    font-weight:bold; 
+    font-size:50px; 
+    text-align: center;
+    color: #09838b
+}
+.user-input{
+    width:100%;
+    margin:10px 0px;
+    padding:20px; 
+    border-radius: 10px;
+    outline:none;
+    font-size: 20;
+    background: #09838b;
+    font-weight: bold;
+}
+
+.required-input{
+    width:100%;
+    margin:10px 0px;
+    padding:20px; 
+    border-radius: 10px;
+    background: red;
+    outline:none;
+    color: black;
+    font-weight: bold;
+    font-size: 20;
+}
+
+.btn-user{
+    padding:20px;
+    width:100%;
+    color:steelblue;
+    background-color:black;
+    font-weight:bold;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@media screen and (max-width: 600px){
+    .user-input,  .btn-user, .required-input{
+        width: 60%;
+    }
+
+    .title-form{
+        font-size: 30px;
+    }
 
 }
-.pictureBack{
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    background-image: url("./img/acertijo.jpg");
-    background-position: center center;
-    background-size: cover;
+@media screen and (max-width: 500px){
+    .user-input,  .btn-user, .required-input{
+        width: 30%;
+        font-size: 5px;
+    }
+
+    .title-form{
+        font-size: 20px;
+    }
 
 }
-
