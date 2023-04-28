@@ -1,9 +1,10 @@
 const container = document.querySelector("#userFormContainer");
+const boardImg = document.querySelector("#boardImg");
 const userForm = document.createElement("form");
 let titleForm = document.createElement("label");
 const userName = document.createElement("input");
 const buttonGame = document.createElement("input");
-gameContainer.classList.remove("gallery");
+
 
 
 // Atributes Elements
@@ -37,15 +38,19 @@ function saveLS(){
         localStorage.setItem("players", `[${JSON.stringify(currentUser)}]`);
     } else {
         let playersArr = Array.from(JSON.parse(localStorage.getItem("players")));
-        playersArr.push(currentUser);
+        playersArr.unshift(currentUser);
         localStorage.setItem("players", JSON.stringify(playersArr));
     }
 }
 
+
+
 buttonGame.addEventListener("click", function(){
     saveLS();
+    checkeLS();
     container.classList.add("no-show");
     startGameContainer.classList.remove("no-show");
+    startGameContainer.classList.toggle("active");
     startGameContainer.classList.add("show");
     userName.value = "";
 });

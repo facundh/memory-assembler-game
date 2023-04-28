@@ -7,12 +7,6 @@ const btnClear = document.createElement("btn");
 // gameContainer.addEventListener("DOMContentLoaded", getDataLS())
 
 
-// Data from LS
-// function getDataLS(){
-//     return JSON.parse(localStorage.getItem("player"));
-// }
-// let answer = getDataLS()
-// console.log(answer)
 
 // Images
 function createArrImg(_element, _src,_name, _className, arr){
