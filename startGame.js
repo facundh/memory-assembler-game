@@ -1,3 +1,4 @@
+
 const startGameContainer = document.querySelector("#startBoxContainer");
 const boxStartGame = document.createElement("form");
 const titleFormStart = document.createElement("label");
@@ -12,9 +13,17 @@ btnStartGame.setAttribute("type", "button");
 
 
 // Take data from LS
-// let profile = JSON.parse(localStorage.getItem("player"));
-// console.log(profile)
-titleFormStart.innerHTML = `Are you ready ?`
+
+function checkeLS (){
+    if(localStorage.length === 0){
+        let arrVacio = [];
+        return arrVacio;
+    } else {
+        let playerSaved = JSON.parse(localStorage.getItem("players"));
+        titleFormStart.innerHTML = `Are you ready ${playerSaved[0].player}?`
+    }
+}
+
 boxStartGame.appendChild(titleFormStart);
 boxStartGame.appendChild(btnStartGame);
 startGameContainer.appendChild(boxStartGame);
@@ -23,5 +32,7 @@ startGameContainer.appendChild(boxStartGame);
 btnStartGame.addEventListener("click", () => {
     startGameContainer.classList.add("no-show");
     startGameContainer.classList.remove("show");
-    gameContainer.classList.remove("no-show")
+    gameContainer.classList.remove("no-show");
+    gameContainer.classList.add("show");
 });
+
